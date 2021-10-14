@@ -9,5 +9,5 @@ class Comment(models.Model):
     dislike = models.IntegerField(default=0)
 
 class Reply(models.Model):
-    comment = models.ForeignKey(Comment, on_delete=models.CASCADE, default=None)
+    comment = models.ForeignKey('Comment', on_delete=models.CASCADE, default=None)
     reply = models.TextField(max_length=500)
